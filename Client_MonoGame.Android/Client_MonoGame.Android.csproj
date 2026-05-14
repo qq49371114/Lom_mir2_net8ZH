@@ -17,7 +17,7 @@
     <MonoGamePlatform>Android</MonoGamePlatform>
     <DefineConstants>$(DefineConstants);REAL_ANDROID</DefineConstants>
     <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">android-arm64</RuntimeIdentifier>
-  </PropertyGroup>
+  <CheckEolTargetFramework>false</CheckEolTargetFramework></PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <AndroidFastDeploymentType>None</AndroidFastDeploymentType>
