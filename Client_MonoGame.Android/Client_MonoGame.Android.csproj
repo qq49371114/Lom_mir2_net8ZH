@@ -2,7 +2,7 @@
   <Import Project="..\Client_MonoGame.Mobile.props" Condition="Exists('..\Client_MonoGame.Mobile.props')" />
 
   <PropertyGroup>
-    <TargetFramework>net11.0-android</TargetFramework>
+    <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
     <RootNamespace>Client_MonoGame.Android</RootNamespace>
@@ -45,7 +45,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="11.0.0-preview.2.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="$(MobileMonoGameVersion)" />
   </ItemGroup>
 
