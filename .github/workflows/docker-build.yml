@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET
@@ -13,9 +13,9 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Build Server
-        run: dotnet publish "Server.MirForms/Server.csproj" -c Release -o ./publish -r linux-x64 --self-contained
+        run: dotnet publish "Server.MirForms/Server.csproj" -c Release -o ./publish -r win-x64 --self-contained
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: mir2-linux-server
+          name: mir2-windows-server
           path: ./publish
