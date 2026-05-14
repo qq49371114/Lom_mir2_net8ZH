@@ -21,7 +21,7 @@ jobs:
           dotnet-version: '8.0.x'
           
       - name: Install Android Workload
-        run: dotnet workload install android --source https://api.nuget.org/v3/index.json
+        run: dotnet workload install android ios --source https://api.nuget.org/v3/index.json
         
       - name: Build Android APK
         run: dotnet build "Client_MonoGame.Android/Client_MonoGame.Android.csproj" -c Release -f net8.0-android
