@@ -9,7 +9,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseMaui>true</UseMaui>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
     <ApplicationId>com.lommir.client.monogame.android</ApplicationId>
     <ApplicationVersion>20000</ApplicationVersion>
     <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
@@ -41,6 +41,8 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="MauiProgram.cs" />
+    <Compile Include="AndroidBootstrapGame.cs" />
+    <Compile Include="MobileClientMarker.cs" />
   </ItemGroup>
 
   <ItemGroup>
