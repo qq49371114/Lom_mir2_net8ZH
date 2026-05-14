@@ -23,22 +23,19 @@ jobs:
       - name: Install Android Workload
         run: dotnet workload install android --source https://api.nuget.org/v3/index.json
         
-      - name: Build Android
-        id: build_step
+      - name: Restore dependencies
+        run: dotnet restore "Client_MonoGame.Android/Client_MonoGame.Android.csproj"
+        
+      - name: Publish Android APK
         run: |
-          dotnet build "Client_MonoGame.Android/Client_MonoGame.Android.csproj" -c Release -f net8.0-android /p:CheckEolTargetFramework=false
-        continue-on-error: true
-
-      - name: List Output Files (Debug)
+          dotnet publish "Client_MonoGame.Android/Client_MonoGame.Android.csproj" -c Release -f net8.0-android /p:CheckEolTargetFramework=false /p:AndroidPackageFormat=apk /p:AndroidBuildApplicationPackage=true -o ./publish_output
+        
+      - name: List Output Files (Confirming APK)
         run: |
-          dir /s Client_MonoGame.Androidin\*.apk
-        continue-on-error: true
+          dir /s ./publish_output
         
       - name: Upload APK
-        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mir2-android-client
-          path: |
-             **/*.apk
-             **/*.aab
+          name: mir2-android-client-v2
+          path: ./publish_output/*.apk
