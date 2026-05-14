@@ -128,7 +128,7 @@ namespace Client
 
         //Network
         public static bool UseConfig = false;
-        public static string IPAddress = "127.0.0.1";
+        public static string IPAddress = "47.109.61.116";
         public static int Port = 7000;
         public const int TimeOut = 5000;
         public static string MicroBaseUrl = string.Empty;
@@ -246,13 +246,13 @@ namespace Client
 
         //AutoPatcher
         public static bool P_Patcher = true;
-        public static string P_Host = @"http://127.0.0.1/mir2/cmir/patch/";//默认 http://mirfiles.com/mir2/cmir/patch/
+        public static string P_Host = @"http://47.109.61.116/mir2/cmir/patch/";//默认 http://mirfiles.com/mir2/cmir/patch/
         public static string P_PatchFileName = @"PList.gz";
         public static bool P_NeedLogin = false;
         public static string P_Login = string.Empty;
         public static string P_Password = string.Empty;
         public static string P_ServerName = string.Empty;
-        public static string P_BrowserAddress = "http://127.0.0.1/mir2-patchsite/";//默认 https://www.lomcn.org/mir2-patchsite/
+        public static string P_BrowserAddress = "http://47.109.61.116/mir2-patchsite/";//默认 https://www.lomcn.org/mir2-patchsite/
         public static string P_Client = Application.StartupPath + "\\";
         public static bool P_AutoStart = false;
         public static int P_Concurrency = 1;
