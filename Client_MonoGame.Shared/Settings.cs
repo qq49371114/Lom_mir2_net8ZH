@@ -8,11 +8,11 @@ namespace MonoShare
     class Settings
     {
         public static bool UseConfig = false;
-        public static string IPAddress = "192.168.0.100";
+        public static string IPAddress = "47.109.61.116";
         public static int Port = 7000;
         public const int TimeOut = 5000;
 
-        public static string AsynDownLoadIPAddress = "ftp://192.168.0.100:8888/";
+        public static string AsynDownLoadIPAddress = "http://47.109.61.116:8888/";
         public static bool P_Patcher = true;
         public static string P_Host = @"http://www.baidu.com/";
         public static string P_PatchFileName = @"PList.gz";
